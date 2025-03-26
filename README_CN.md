@@ -1,89 +1,49 @@
 <div align="center">
 
-<a href='#企业版'>
-  <img src="./docs/images/ent.svg" alt="icon"/>
-</a>
+<h1 align="center">NextChat2</h1>
 
-<h1 align="center">NextChat</h1>
+无广告版NextChat - 轻量、快速的AI助手，支持Claude、DeepSeek、GPT4和Gemini Pro。
 
-一键免费部署你的私人 ChatGPT 网页应用，支持 Claude, GPT4 & Gemini Pro 模型。
-
-[NextChatAI](https://nextchat.club?utm_source=readme) / [企业版](#%E4%BC%81%E4%B8%9A%E7%89%88) / [演示 Demo](https://chat-gpt-next-web.vercel.app/) / [反馈 Issues](https://github.com/Yidadaa/ChatGPT-Next-Web/issues) / [加入 Discord](https://discord.gg/zrhvHCr79N)
-
-[<img src="https://vercel.com/button" alt="Deploy on Zeabur" height="30">](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FChatGPTNextWeb%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=nextchat&repository-name=NextChat) [<img src="https://zeabur.com/button.svg" alt="Deploy on Zeabur" height="30">](https://zeabur.com/templates/ZBUEFA)  [<img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod" height="30">](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
+[简体中文] / [English](./README.md)
 
 </div>
 
-## 企业版
+## 项目介绍
 
-满足您公司私有化部署和定制需求
-- **品牌定制**：企业量身定制 VI/UI，与企业品牌形象无缝契合
-- **资源集成**：由企业管理人员统一配置和管理数十种 AI 资源，团队成员开箱即用
-- **权限管理**：成员权限、资源权限、知识库权限层级分明，企业级 Admin Panel 统一控制
-- **知识接入**：企业内部知识库与 AI 能力相结合，比通用 AI 更贴近企业自身业务需求
-- **安全审计**：自动拦截敏感提问，支持追溯全部历史对话记录，让 AI 也能遵循企业信息安全规范
-- **私有部署**：企业级私有部署，支持各类主流私有云部署，确保数据安全和隐私保护
-- **持续更新**：提供多模态、智能体等前沿能力持续更新升级服务，常用常新、持续先进
+NextChat2是一个基于[NextChat](https://github.com/Yidadaa/ChatGPT-Next-Web)的修改版本，主要目标是提供无广告的纯净体验。这个项目保留了原版的所有功能，同时移除了所有广告内容，使界面更加简洁专业。
 
-企业版咨询: **business@nextchat.dev**
+## 主要修改内容
 
-<img width="300" src="https://github.com/user-attachments/assets/bb29a11d-ff75-48a8-b1f8-d2d7238cf987">
+1. **移除广告文本**：
+   - 将错误提示信息从"😆 对话遇到了一些问题，不用慌"修改为"😊 欢迎使用NextChat，请先完成以下设置"
+   - 将"使用 NextChat AI"改为"开始使用 NextChat"
+   - 将"（性价比最高的方案）"改为"（快速启动选项）"
+   - 将详细描述文本改为简单的"简单配置，快速开始，支持多种AI模型"
+   - 移除了顶部广告文本"🥳 NextChat AI 首发优惠，立刻解锁 OpenAI o1, GPT-4o, Claude-3.5 等最新大模型"，改为简单的"欢迎使用 NextChat"
 
+2. **移除广告按钮**：
+   - 从settings.tsx文件中移除了"开始对话"按钮
+   - 从auth.tsx文件中移除了"开始对话"链接
 
-## 开始使用
+3. **增强用户体验**：
+   - 添加了密码保护功能示例配置
+   - 优化了整体界面，使其更加简洁清晰
 
-1. 准备好你的 [OpenAI API Key](https://platform.openai.com/account/api-keys);
-2. 点击右侧按钮开始部署：
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&env=GOOGLE_API_KEY&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web)，直接使用 Github 账号登录即可，记得在环境变量页填入 API Key 和[页面访问密码](#配置页面访问密码) CODE；
-3. 部署完毕后，即可开始使用；
-4. （可选）[绑定自定义域名](https://vercel.com/docs/concepts/projects/domains/add-a-domain)：Vercel 分配的域名 DNS 在某些区域被污染了，绑定自定义域名即可直连。
+## 使用方法
 
-<div align="center">
-   
-![主界面](./docs/images/cover.png)
+### 快速开始
 
-</div>
+1. 创建`.env`文件，参考`.env.template`添加必要配置
+2. 设置`CODE=your-password`以启用密码保护
+3. 启动应用：
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-## 保持更新
+## 功能特性
 
-如果你按照上述步骤一键部署了自己的项目，可能会发现总是提示“存在更新”的问题，这是由于 Vercel 会默认为你创建一个新项目而不是 fork 本项目，这会导致无法正确地检测更新。
-推荐你按照下列步骤重新部署：
-
-- 删除掉原先的仓库；
-- 使用页面右上角的 fork 按钮，fork 本项目；
-- 在 Vercel 重新选择并部署，[请查看详细教程](./docs/vercel-cn.md#如何新建项目)。
-
-### 打开自动更新
-
-> 如果你遇到了 Upstream Sync 执行错误，请[手动 Sync Fork 一次](./README_CN.md#手动更新代码)！
-
-当你 fork 项目之后，由于 Github 的限制，需要手动去你 fork 后的项目的 Actions 页面启用 Workflows，并启用 Upstream Sync Action，启用之后即可开启每小时定时自动更新：
-
-![自动更新](./docs/images/enable-actions.jpg)
-
-![启用自动更新](./docs/images/enable-actions-sync.jpg)
-
-### 手动更新代码
-
-如果你想让手动立即更新，可以查看 [Github 的文档](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) 了解如何让 fork 的项目与上游代码同步。
-
-你可以 star/watch 本项目或者 follow 作者来及时获得新功能更新通知。
-
-## 配置页面访问密码
-
-> 配置密码后，用户需要在设置页手动填写访问码才可以正常聊天，否则会通过消息提示未授权状态。
-
-> **警告**：请务必将密码的位数设置得足够长，最好 7 位以上，否则[会被爆破](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/518)。
-
-本项目提供有限的权限控制功能，请在 Vercel 项目控制面板的环境变量页增加名为 `CODE` 的环境变量，值为用英文逗号分隔的自定义密码：
-
-```
-code1,code2,code3
-```
-
-增加或修改该环境变量后，请**重新部署**项目使改动生效。
-
-## 环境变量
+### 环境变量
 
 > 本项目大多数配置项都通过环境变量来设置，教程：[如何修改 Vercel 环境变量](./docs/vercel-cn.md)。
 
@@ -349,7 +309,7 @@ docker run -d -p 3000:3000 \
 
 在控制台运行下方命令：
 
-```shell
+```bash
 bash <(curl -s https://raw.githubusercontent.com/Yidadaa/ChatGPT-Next-Web/main/scripts/setup.sh)
 ```
 
