@@ -46,6 +46,10 @@ docker pull qweabc123456/qunqinchat:latest
 
 # 运行容器
 docker run -d -p 3000:3000 -e CODE=your_password qweabc123456/qunqinchat:latest
+
+# 如果想指定容器名称和自定义端口（例如9010），可以使用以下命令：
+# --name选项用于指定容器名称，-p选项用于指定端口映射
+docker run -d -p 9010:3000 --name qunqinchat -e CODE=your-password yidadaa/qunqinchat
 ```
 
 ### 方法2：使用Docker Compose
@@ -409,9 +413,15 @@ docker run -d -p 3000:3000 \
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=your-password \
    yidadaa/qunqinchat
+
+# 如果想指定容器名称和自定义端口（例如9010），可以使用以下命令：
+# --name选项用于指定容器名称，-p选项用于指定端口映射
+docker run -d -p 9010:3000 --name qunqinchat -e CODE=your-password yidadaa/qunqinchat
 ```
 
-You can start service behind a proxy:
+### 代理设置
+
+你可以在服务后面放置一个代理：
 
 ```shell
 docker run -d -p 3000:3000 \
@@ -421,13 +431,13 @@ docker run -d -p 3000:3000 \
    yidadaa/qunqinchat
 ```
 
-If your proxy needs password, use:
+如果你的代理需要密码，使用：
 
 ```shell
 -e PROXY_URL="http://127.0.0.1:7890 user pass"
 ```
 
-If enable MCP, use：
+如果启用MCP，使用：
 
 ```
 docker run -d -p 3000:3000 \

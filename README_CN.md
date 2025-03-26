@@ -274,6 +274,13 @@ docker run -d -p 3000:3000 \
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=页面访问密码 \
    yidadaa/chatgpt-next-web
+   
+# 如果想指定容器名称和自定义端口（例如9010），可以使用以下命令：
+# --name选项用于指定容器名称，-p选项用于指定端口映射
+docker run -d -p 9010:3000 --name qunqinchat \
+   -e OPENAI_API_KEY=sk-xxxx \
+   -e CODE=页面访问密码 \
+   yidadaa/chatgpt-next-web
 ```
 
 你也可以指定 proxy：
