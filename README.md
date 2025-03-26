@@ -1,79 +1,51 @@
 <div align="center">
 
-<a href='https://nextchat.club'>
-  <img src="https://github.com/user-attachments/assets/83bdcc07-ae5e-4954-a53a-ac151ba6ccf3" width="1000" alt="icon"/>
-</a>
+<h1 align="center">NextChat2</h1>
 
+[English] / [简体中文](./README_CN.md)
 
-
-
-<h1 align="center">NextChat</h1>
-
-English / [简体中文](./README_CN.md)
-
-<a href="https://trendshift.io/repositories/5973" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5973" alt="ChatGPTNextWeb%2FChatGPT-Next-Web | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
-
-✨ Light and Fast AI Assistant,with Claude, DeepSeek, GPT4 & Gemini Pro support. 
-
-[![Saas][Saas-image]][saas-url]
-[![Web][Web-image]][web-url]
-[![Windows][Windows-image]][download-url]
-[![MacOS][MacOS-image]][download-url]
-[![Linux][Linux-image]][download-url]
-
-[NextChatAI](https://nextchat.club?utm_source=readme) / [Web App Demo](https://app.nextchat.dev) / [Desktop App](https://github.com/Yidadaa/ChatGPT-Next-Web/releases) / [Discord](https://discord.gg/YCkeafCafC) / [Enterprise Edition](#enterprise-edition) / [Twitter](https://twitter.com/NextChatDev)
-
-
-[saas-url]: https://nextchat.club?utm_source=readme
-[saas-image]: https://img.shields.io/badge/NextChat-Saas-green?logo=microsoftedge
-[web-url]: https://app.nextchat.dev/
-[download-url]: https://github.com/Yidadaa/ChatGPT-Next-Web/releases
-[Web-image]: https://img.shields.io/badge/Web-PWA-orange?logo=microsoftedge
-[Windows-image]: https://img.shields.io/badge/-Windows-blue?logo=windows
-[MacOS-image]: https://img.shields.io/badge/-MacOS-black?logo=apple
-[Linux-image]: https://img.shields.io/badge/-Linux-333?logo=ubuntu
-
-[<img src="https://zeabur.com/button.svg" alt="Deploy on Zeabur" height="30">](https://zeabur.com/templates/ZBUEFA) [<img src="https://vercel.com/button" alt="Deploy on Vercel" height="30">](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FChatGPTNextWeb%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=nextchat&repository-name=NextChat)  [<img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod" height="30">](https://gitpod.io/#https://github.com/ChatGPTNextWeb/NextChat) 
-
-[<img src="https://github.com/user-attachments/assets/903482d4-3e87-4134-9af1-f2588fa90659" height="50" width="" >](https://monica.im/?utm=nxcrp)
+✨ 无广告版NextChat - 轻量、快速的AI助手，支持Claude、DeepSeek、GPT4和Gemini Pro。
 
 </div>
 
-## 🥳 Cheer for DeepSeek, China's AI star!
- > Purpose-Built UI for DeepSeek Reasoner Model
- 
-<img src="https://github.com/user-attachments/assets/f3952210-3af1-4dc0-9b81-40eaa4847d9a"/>
+## 项目介绍
 
+NextChat2是一个基于[NextChat](https://github.com/Yidadaa/ChatGPT-Next-Web)的修改版本，主要改进：
 
+- **移除了所有广告内容**：提供更纯净的用户体验
+- **修改了界面文本**：使文本更加简洁友好和专业
+- **保留了原版全部功能**：支持多种AI模型，同时具备轻量化、快速的特点
 
-## 🫣 NextChat Support MCP  ! 
-> Before build, please set env ENABLE_MCP=true
+## 主要修改内容
 
-<img src="https://github.com/user-attachments/assets/d8851f40-4e36-4335-b1a4-ec1e11488c7e"/>
+1. **移除广告文本**：
+   - 将错误提示信息从"😆 对话遇到了一些问题，不用慌"修改为"😊 欢迎使用NextChat，请先完成以下设置"
+   - 将"使用 NextChat AI"改为"开始使用 NextChat"
+   - 将"（性价比最高的方案）"改为"（快速启动选项）"
+   - 将详细描述文本改为简单的"简单配置，快速开始，支持多种AI模型"
+   - 移除了顶部广告文本"🥳 NextChat AI 首发优惠..."，改为简单的"欢迎使用 NextChat"
 
+2. **移除广告按钮**：
+   - 从settings.tsx文件中移除了"开始对话"按钮
+   - 从auth.tsx文件中移除了"开始对话"链接
 
-## Enterprise Edition
+3. **增强用户体验**：
+   - 添加了密码保护功能示例配置
+   - 优化了整体界面，使其更加简洁清晰
 
-Meeting Your Company's Privatization and Customization Deployment Requirements:
-- **Brand Customization**: Tailored VI/UI to seamlessly align with your corporate brand image.
-- **Resource Integration**: Unified configuration and management of dozens of AI resources by company administrators, ready for use by team members.
-- **Permission Control**: Clearly defined member permissions, resource permissions, and knowledge base permissions, all controlled via a corporate-grade Admin Panel.
-- **Knowledge Integration**: Combining your internal knowledge base with AI capabilities, making it more relevant to your company's specific business needs compared to general AI.
-- **Security Auditing**: Automatically intercept sensitive inquiries and trace all historical conversation records, ensuring AI adherence to corporate information security standards.
-- **Private Deployment**: Enterprise-level private deployment supporting various mainstream private cloud solutions, ensuring data security and privacy protection.
-- **Continuous Updates**: Ongoing updates and upgrades in cutting-edge capabilities like multimodal AI, ensuring consistent innovation and advancement.
+## 使用方法
 
-For enterprise inquiries, please contact: **business@nextchat.dev**
+### 快速开始
 
-## Screenshots
+1. 创建`.env`文件，参考`.env.template`添加必要配置
+2. 设置`CODE=your-password`以启用密码保护
+3. 启动应用：
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-![Settings](./docs/images/settings.png)
-
-![More](./docs/images/more.png)
-
-
-## Features
+## 功能特性
 
 - **Deploy for free with one-click** on Vercel in under 1 minute
 - Compact client (~5MB) on Linux/Windows/MacOS, [download it now](https://github.com/Yidadaa/ChatGPT-Next-Web/releases)
@@ -86,12 +58,6 @@ For enterprise inquiries, please contact: **business@nextchat.dev**
 - Awesome prompts powered by [awesome-chatgpt-prompts-zh](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) and [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
 - Automatically compresses chat history to support long conversations while also saving your tokens
 - I18n: English, 简体中文, 繁体中文, 日本語, Français, Español, Italiano, Türkçe, Deutsch, Tiếng Việt, Русский, Čeština, 한국어, Indonesia
-
-<div align="center">
-   
-![主界面](./docs/images/cover.png)
-
-</div>
 
 ## Roadmap
 
