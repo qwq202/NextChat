@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1 align="center">NextChat2</h1>
+<h1 align="center">qunqinChat</h1>
 
 无广告版NextChat - 轻量、快速的AI助手，支持Claude、DeepSeek、GPT4和Gemini Pro。
 
@@ -10,7 +10,7 @@
 
 ## 项目介绍
 
-NextChat2是一个基于[NextChat](https://github.com/Yidadaa/ChatGPT-Next-Web)的修改版本，主要目标是提供无广告的纯净体验。这个项目保留了原版的所有功能，同时移除了所有广告内容，使界面更加简洁专业。
+qunqinChat是一个基于[NextChat](https://github.com/Yidadaa/ChatGPT-Next-Web)的修改版本，主要目标是提供无广告的纯净体验。这个项目保留了原版的所有功能，同时移除了所有广告内容，使界面更加简洁专业。
 
 ## 主要修改内容
 

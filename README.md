@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1 align="center">NextChat2</h1>
+<h1 align="center">qunqinChat</h1>
 
 [English] / [简体中文](./README_CN.md)
 
@@ -10,11 +10,12 @@
 
 ## 项目介绍
 
-NextChat2是一个基于[NextChat](https://github.com/Yidadaa/ChatGPT-Next-Web)的修改版本，主要改进：
+qunqinChat是一个基于[NextChat](https://github.com/Yidadaa/ChatGPT-Next-Web)的修改版本，主要改进：
 
 - **移除了所有广告内容**：提供更纯净的用户体验
 - **修改了界面文本**：使文本更加简洁友好和专业
 - **保留了原版全部功能**：支持多种AI模型，同时具备轻量化、快速的特点
+- **提供Docker镜像**：一键部署，方便所有人使用
 
 ## 主要修改内容
 
@@ -33,9 +34,51 @@ NextChat2是一个基于[NextChat](https://github.com/Yidadaa/ChatGPT-Next-Web)�
    - 添加了密码保护功能示例配置
    - 优化了整体界面，使其更加简洁清晰
 
-## 使用方法
+## 使用Docker镜像
 
-### 快速开始
+qunqinChat提供了官方Docker镜像，可以通过以下方式使用：
+
+### 方法1：使用Docker命令
+
+```bash
+# 拉取镜像
+docker pull qweabc123456/qunqinchat:latest
+
+# 运行容器
+docker run -d -p 3000:3000 -e CODE=your_password qweabc123456/qunqinchat:latest
+```
+
+### 方法2：使用Docker Compose
+
+创建一个`docker-compose.yml`文件，内容如下：
+
+```yaml
+version: "3"
+services:
+  qunqinchat:
+    image: qweabc123456/qunqinchat:latest
+    ports:
+      - 3000:3000
+    environment:
+      - CODE=your_password
+      # 可选的API密钥配置
+      # - OPENAI_API_KEY=your_openai_key
+      # - GOOGLE_API_KEY=your_google_key
+```
+
+然后运行：
+
+```bash
+docker-compose up -d
+```
+
+### 访问应用
+
+启动容器后，通过浏览器访问：`http://localhost:3000`
+
+## 本地开发
+
+如果您想在本地开发或运行：
 
 1. 创建`.env`文件，参考`.env.template`添加必要配置
 2. 设置`CODE=your-password`以启用密码保护
@@ -360,12 +403,12 @@ yarn dev
 ### Docker (Recommended)
 
 ```shell
-docker pull yidadaa/chatgpt-next-web
+docker pull yidadaa/qunqinchat
 
 docker run -d -p 3000:3000 \
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=your-password \
-   yidadaa/chatgpt-next-web
+   yidadaa/qunqinchat
 ```
 
 You can start service behind a proxy:
@@ -375,7 +418,7 @@ docker run -d -p 3000:3000 \
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=your-password \
    -e PROXY_URL=http://localhost:7890 \
-   yidadaa/chatgpt-next-web
+   yidadaa/qunqinchat
 ```
 
 If your proxy needs password, use:
@@ -391,7 +434,7 @@ docker run -d -p 3000:3000 \
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=your-password \
    -e ENABLE_MCP=true \
-   yidadaa/chatgpt-next-web
+   yidadaa/qunqinchat
 ```
 
 ### Shell
